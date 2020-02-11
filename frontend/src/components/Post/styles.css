@@ -1,0 +1,72 @@
+.post-item-component {
+  background-color: whitesmoke;
+  color: #0e0e0e;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  padding: 1em;
+  margin: 1.2em 0;
+}
+
+.post-category {
+  color: rgba(0,0,0,.54);
+  text-transform: uppercase;
+}
+
+.post-title {
+  font-weight: 800;
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin-top: .3em;
+}
+
+.post-body {
+  margin-top: .5em;
+  color: rgba(0,0,0,.54);
+}
+
+.post-body.wrapped {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40em;
+}
+
+.post-footer {
+  margin-top: .5em;
+  display: flex;
+}
+
+.footer-data {
+  flex: 1;
+}
+
+.post-author {
+  text-transform: capitalize;
+}
+
+.post-timestamp {
+  margin-top: .3em;
+  color: rgba(0,0,0,.54);
+}
+
+.footer-controls {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer-controls > span {
+  margin-right: .6em;
+}
+
+.footer-controls i {
+  cursor: pointer;
+}
+
+.footer-controls a {
+  color: #0e0e0e;
+}
+
+.footer-controls > span > span {
+  margin-left: .3em;
+}

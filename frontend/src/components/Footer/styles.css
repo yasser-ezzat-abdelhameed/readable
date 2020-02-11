@@ -1,0 +1,13 @@
+.footer-component {
+  width: 100vw;
+  height: 3.125em;
+  background-color: #0e0e0e;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: .875em;
+}

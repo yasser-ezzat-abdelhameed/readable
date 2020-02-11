@@ -1,0 +1,40 @@
+.comment-component {
+  background-color: #0e0e0e;
+  color: whitesmoke;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  padding: 1em;
+  margin: 1.2em 0;
+}
+
+.comment-footer {
+  margin-top: .5em;
+  display: flex;
+}
+
+.footer-data {
+  flex: 1;
+}
+
+.comment-author {
+  text-transform: capitalize;
+}
+
+.comment-timestamp {
+  margin-top: .3em;
+  /* color: rgba(0,0,0,.54); */
+}
+
+.footer-controls {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.footer-controls > span {
+  margin-right: .6em;
+}
+
+.footer-controls i {
+  cursor: pointer;
+}

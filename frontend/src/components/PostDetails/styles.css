@@ -1,0 +1,55 @@
+.post-details-component {
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left-section {
+  flex: 1;
+  margin: 1em 0;
+}
+
+.back-btn {
+  width: 10em;
+  display: flex;
+  background-color: #0e0e0e;
+  color: whitesmoke;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  padding: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-btn > span {
+  padding-left: 1em;
+}
+
+.right-section {
+  flex: 4;
+  margin: 1em;
+}
+
+.add-comment-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit {
+  padding: .5em 1em;
+  background-color: #0e0e0e;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.125em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.cancel {
+  padding: .5em 1em;
+  background-color: #333;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.125em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
