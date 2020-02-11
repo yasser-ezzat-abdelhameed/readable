@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import LoadingBar from 'react-redux-loading-bar'
 import Home from '../Home'
 import PostDetails from '../PostDetails'
 import PostForm from '../PostForm'
@@ -19,6 +20,7 @@ const App = ({ dispatch }) => {
   return (
     <BrowserRouter data-test='app-component'>
       <Header />
+      <LoadingBar />
       <Switch>
         <Route path="/" exact render={ () => <Home /> } />
         <Route path="/add-new-post" exact render={ () => <PostForm /> } />

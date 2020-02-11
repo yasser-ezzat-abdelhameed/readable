@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from 'react-redux-loading-bar'
 import { getCategories } from '../util/apis'
 
 export const RECEIVE_CATEGORIES = "RECEIVE_CATEGORIES"
@@ -8,6 +9,7 @@ export const receiveCategories = categories => ({
 })
 
 export const handleReceiveCategories = () => async dispatch => {
+  dispatch(showLoading())
   const { data, error } = await getCategories()
   if (data) {
     dispatch(receiveCategories(data))
@@ -15,4 +17,5 @@ export const handleReceiveCategories = () => async dispatch => {
     // error handling
     if (error) console.log(error)
   }
+  dispatch(hideLoading())
 }

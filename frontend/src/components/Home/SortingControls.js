@@ -1,16 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { sortPosts } from '../../actions/posts'
 
-const SortingControls = ({ dispatch }) => {
-  const [activeSortingType, setActiveSortingType] = useState("none")
-
-  const handleSorting = (type, val) => {
-    // console.log("handleSorting", type, val)
-    setActiveSortingType(type)
-    dispatch(sortPosts({ type, val }))
-  }
-
+const SortingControls = ({ activeSortingType, handleSorting, dispatch }) => {
   const controls = [
     { type: "voteScore", label: "Score" },
     { type: "timestamp", label: "Date" },

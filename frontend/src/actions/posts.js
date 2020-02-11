@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from 'react-redux-loading-bar'
 import { getPosts, getPost, deletePost, voteForPost, editPost, addPost } from '../util/apis'
 
 export const RECEIVE_POSTS = "RECEIVE_POSTS"
@@ -26,6 +27,7 @@ export const removePost = postId => ({
 })
 
 export const handleReceivePosts = categoryId => async dispatch => {
+  dispatch(showLoading())
   const { data, error } = await getPosts(categoryId)
   if (data) {
     dispatch(receivePosts(data))
@@ -33,9 +35,11 @@ export const handleReceivePosts = categoryId => async dispatch => {
     // error handling
     if (error) console.log(error)
   }
+  dispatch(hideLoading())
 }
 
 export const handleReceivePost = (postId, errCallback) => async dispatch => {
+  dispatch(showLoading())
   const { data, error } = await getPost(postId)
   if (data) {
     dispatch(receivePosts([data]))
@@ -44,9 +48,11 @@ export const handleReceivePost = (postId, errCallback) => async dispatch => {
     if (error) console.log(error)
     errCallback()
   }
+  dispatch(hideLoading())
 }
 
 export const handlePostVote = (postId, option) => async (dispatch, getState) => {
+  dispatch(showLoading())
   await voteForPost(postId, option)
   let post = [...getState().posts].find(p => p.id === postId)
   switch (option) {
@@ -62,20 +68,27 @@ export const handlePostVote = (postId, option) => async (dispatch, getState) => 
       return
   }
   dispatch(updatePost(post))
+  dispatch(hideLoading())
 }
 
 export const handlePostEdit = (post, callback) => async dispatch => {
+  dispatch(showLoading())
   await editPost(post)
   dispatch(updatePost(post))
   callback()
+  dispatch(hideLoading())
 }
 
 export const handlePostAdd = (post, callback) => async dispatch => {
+  dispatch(showLoading())
   await addPost(post)
   callback()
+  dispatch(hideLoading())
 }
 
 export const handleDeletePost = postId => async dispatch => {
+  dispatch(showLoading())
   await deletePost(postId)
   dispatch(removePost(postId))
+  dispatch(hideLoading())
 }
