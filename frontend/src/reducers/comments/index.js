@@ -7,9 +7,9 @@ const comments = (state = [], action) => {
     }
     case UPDATE_COMMENT: {
       let comments = [...state]
-      for (let comment of comments) {
-        if (comment.id === action.comment.id) {
-          comment = { ...action.comment }
+      for (let i=0; i<comments.length; i++) {
+        if (comments[i].id === action.comment.id) {
+          comments[i] = { ...action.comment }
           break
         }
       }
