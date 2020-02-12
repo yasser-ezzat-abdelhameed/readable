@@ -19,7 +19,7 @@ const App = ({ dispatch }) => {
 
   return (
     <BrowserRouter data-test='app-component'>
-      <Header />
+      <Header data-test='header' />
       <LoadingBar />
       <Switch>
         <Route path="/" exact render={ () => <Home /> } />
@@ -30,7 +30,7 @@ const App = ({ dispatch }) => {
         <Route path="/:categoryId/:postId/edit" exact render={ () => <PostForm /> } />
         <Redirect to="/404" />
       </Switch>
-      <Footer />
+      <Footer data-test='footer' />
     </BrowserRouter>
   )
 }

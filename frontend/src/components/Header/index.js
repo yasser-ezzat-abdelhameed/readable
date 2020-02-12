@@ -4,9 +4,9 @@ import './styles.css'
 
 const Header = props => {
   return (
-    <div className='header-component'>
+    <div className='header-component' data-test='header-component'>
       <div className='logo'>
-        <Link to='/'>Readable</Link>
+        <Link to='/' data-test='home-link'>Readable</Link>
       </div>
     </div>
   )
